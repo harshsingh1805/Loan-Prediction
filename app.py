@@ -7,9 +7,13 @@ from sklearn.decomposition import PCA
 app = Flask(__name__)
 
 # Load your model and PCA object
-model = pickle.load(open(r'model.pkl', 'rb'))
-pca = pickle.load(open(r'pca.pkl', 'rb')) 
+import os
 
+model_path = os.path.join(os.path.dirname(__file__), 'model.pkl')
+pca_path = os.path.join(os.path.dirname(__file__), 'pca.pkl')
+
+model = pickle.load(open(model_path, 'rb'))
+pca = pickle.load(open(pca_path, 'rb'))
 # Route the home page
 @app.route('/')
 def home():
