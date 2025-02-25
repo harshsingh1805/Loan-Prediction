@@ -1,5 +1,3 @@
-# Model-Deployment-AAT-Template
-
 This is a basic template for deploying machine learning models as a web application using **Flask**.
 
 ## Getting Started
